@@ -130,16 +130,18 @@ body {
 }
 
 a {
-    color: #1F7FFF;
+    color: #000;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
+    /*font-style: italic;*/
 }
 
 a:hover,
 a:focus {
-    color: #ffa507;
+    color: #1F7FFF;
     text-decoration: none;
+    /*font-style: normal;*/
 }
 
 p {
