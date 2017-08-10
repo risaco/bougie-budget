@@ -17,8 +17,10 @@ h6 {
 }
 
 .jumbotron h2 {
-	
+	color: white;
 }
+
+.jumbotron 
 
 
 /* Classes */
@@ -27,7 +29,11 @@ h6 {
     width: 100%;
 }
 
+/* IDs */
 
+#budget-hero {
+	background-image: url(../img/bougie-hero.jpg);
+}
 
 
 /* Mobile Breakpoint */
