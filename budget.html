@@ -25,7 +25,7 @@
     <div class="container">
         <!-- Jumbotron header. -->
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-md-12">
                 <div class="jumbotron text-center" id="budget-hero">
                     <h1 class="white-font">Bougie Budget</h1>
                     <h2>Calculate and Compare your budget relative to a zip code</h2>
@@ -35,10 +35,12 @@
         <!-- Row that contains both the income/expenses panel and the results panel -->
         <div class="row">
             <!-- Income and Expenses panel info -->
-            <div class="col-md-8">
+            <div class="col-md-7">
                 <div class="panel panel-default">
-                    <div class="panel-heading text-center">Income &amp; Expenses</div>
+                    <!-- <div class="panel-heading text-center">Income &amp; Expenses</div> -->
                     <div class="panel-body">
+                        <h2 class="custom-panel-header">Income</h2>
+                        <hr class="custom-panel-border">
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="#">Income Label</label>
@@ -55,7 +57,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <button type="button" class="btn btn-primary">ADD ROW</button>
+                                <button type="button" class="btn btn-primary" id="add-income">ADD ROW</button>
                             </div>
                             <!-- <div class="col-md-4">
                                 <label for="#">More Income stuff</label>
@@ -64,7 +66,9 @@
                                 </div>
                             </div> -->
                         </div>
-                        <hr>
+                        <br>
+                        <h2 class="custom-panel-header">Expenses</h2>
+                        <hr class="custom-panel-border">
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="#">Expense Label</label>
@@ -81,7 +85,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <button type="button" class="btn btn-primary">ADD ROW</button>
+                                <button type="button" class="btn btn-primary" id="add-expense">ADD ROW</button>
                             </div>
                             <!-- <div class="col-md-4">
                                 <label for="#">Even More Expenses</label>
@@ -94,10 +98,11 @@
                 </div>
             </div>
             <!-- Results panel -->
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <div class="panel panel-default">
-                    <div class="panel-heading text-center">Future Estimator &amp; Comparisons</div>
                     <div class="panel-body">
+                        <h2 class="custom-panel-header">Expenses</h2>
+                        <hr class="custom-panel-border">
                         <div class="row">
                             <div class="col-md-12">
                                 <h2><strong>Info Here</strong></h2></div>
