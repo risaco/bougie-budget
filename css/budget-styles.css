@@ -1,0 +1,40 @@
+/* Default Styles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.jumbotron h1 {
+	font-size: 122px;
+	color: white;
+}
+
+.jumbotron h2 {
+	
+}
+
+
+/* Classes */
+
+.input-group {
+    width: 100%;
+}
+
+
+
+
+/* Mobile Breakpoint */
+
+@media (max-width: 992px) {
+    .btn-primary {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
