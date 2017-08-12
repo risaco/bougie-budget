@@ -85,7 +85,7 @@ textarea:active {
     margin-bottom: 20px;
 }
 
-label {
+label, p {
     color: white;
 }
 
