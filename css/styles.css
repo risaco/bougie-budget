@@ -43,6 +43,13 @@
     }
 }
 
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+}
+
 #zip-input {
     background-color: rgba(0, 0, 0, 0.50);
     border-width: 0px;
