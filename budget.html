@@ -45,7 +45,7 @@
                             <div class="col-md-6">
                                 <label for="#">Income Label</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" id="income-label-input" aria-describedby="basic-addon1">
                                 </div>
                                 <br>
                                 <!-- <button type="button" class="btn btn-primary" id="clear">Clear Results</button> -->
@@ -53,7 +53,7 @@
                             <div class="col-md-6">
                                 <label for="#">Amount ($)</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" id="income-amount-input" aria-describedby="basic-addon1">
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -71,9 +71,45 @@
                         <hr class="custom-panel-border">
                         <div class="row">
                             <div class="col-md-6">
+                                <p id="housing-label"><strong>Rent / Mortgage</strong></p>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="#">Amount ($)</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="housing-amount-input" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                        </div> <!-- end housing expenses -->
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p id="utilities-label"><strong>Utilities</strong></p>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="utilities-amount">Amount ($)</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="utilities-amount-input" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                        </div> <!-- end housing expenses -->
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p id="gas-label"><strong>Gas</strong></p>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="gas-amount">Amount ($)</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="gas-amount-input" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                        </div> <!-- end housing expenses -->
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6">
                                 <label for="#">Expense Label</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" id="expense-label-input" aria-describedby="basic-addon1">
                                 </div>
                                 <br>
                                 <!-- <button type="button" class="btn btn-primary" id="clear">Clear Results</button> -->
@@ -81,7 +117,7 @@
                             <div class="col-md-6">
                                 <label for="#">Amount ($)</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" id="expense-amount-input" aria-describedby="basic-addon1">
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -94,6 +130,7 @@
                                 </div>
                             </div> -->
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -104,7 +141,7 @@
                         <h2 class="custom-panel-header">Expenses</h2>
                         <hr class="custom-panel-border">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-12" id="expense-display">
                                 <h2><strong>Info Here</strong></h2></div>
                         </div>
                         <div class="row">
