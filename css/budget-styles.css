@@ -25,6 +25,26 @@ h6 {
     color: white;
 }
 
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+}
+.form-control:focus {
+    outline: none;
+    border-color: rgba(0,0,0,0);
+}
+
+
+button:active,
+input:active,
+select:active,
+textarea:active {
+    outline: none;
+}
+
+
 
 /* Bootstrap Overrides */
 
