@@ -36,6 +36,7 @@ $(document).ready(function() {
 
         console.log(results);
         //Firebase object
+
         var locData = {
           zip: zipcode,
           city: city,
@@ -47,6 +48,7 @@ $(document).ready(function() {
         //Empty field
         $('#zip-input').val("");
 
+        location.href = "budget.html";
       })
 
 
@@ -54,7 +56,7 @@ $(document).ready(function() {
 
 
 
-    // location.href = "budget.html";
+
   });
 
 
