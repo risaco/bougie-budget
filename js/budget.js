@@ -26,6 +26,7 @@ $(document).ready(function() {
 
         location.href = "budget.html";
       })
+
   });
 
   // Adding income button function.
@@ -33,13 +34,8 @@ $(document).ready(function() {
     $("#income-block").append("<div class='row repeating-income-row'> <div class='col-md-6'> <div class='input-group'> <input type='text' class='form-control' id='income-label-input' aria-describedby='basic-addon1' placeholder='Type your custom input label here.'> </div> <br> </div> <div class='col-md-6'> <div class='input-group'> <input type='text' class='form-control' id='income-amount-input' aria-describedby='basic-addon1' placeholder='1000'> </div> </div> </div>");
   });
   // Adding expense button function.
-  $("#add-expenses").click(function() {
-  	$("#expenses-block").append("<div class='row repeating-expenses-row'> <div class='col-md-6'> <div class='expenses-group'> <input type='text' class='form-control' id='expenses-label-input' aria-describedby='basic-addon1' placeholder='Type your custom input label here.'> </div> <br> </div> <div class='col-md-6'> <div class='expenses-group'> <input type='text' class='form-control' id='expenses-amount-input' aria-describedby='basic-addon1' placeholder='1000'> </div> </div> </div>");
+  $("#add-expense").click(function() {
+
   });
-<<<<<<< HEAD
   //Buttons
 });
-=======
-
-});
->>>>>>> 1e8dfc9ff5a604cbf10bdf34e33b01065e6343c4
