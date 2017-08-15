@@ -22,7 +22,7 @@ $(document).ready(function() {
     //call API to find state of zip-input
     var cKey = "js-tEvHMQxhKGkoJDfTyw24kpbAamNPl3HPIcxu34MNK7buKrnjXqnhPzS0VFPhJw7r";
     var key = "LMVzZkjQUtY8fT1Ik33NM2tUjGxG0RSMEOlE9Fu49scome6Hhau3dYYwFwdGn5s2";
-    var queryURL = "https://www.zipcodeapi.com/rest/" + cKey + "/info.json/" + zipcode + "/degrees";
+    var queryURL = "https://www.zipcodeapi.com/rest/" + key + "/info.json/" + zipcode + "/degrees";
     console.log(queryURL);
 
     $.ajax({
