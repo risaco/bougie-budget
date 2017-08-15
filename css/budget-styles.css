@@ -81,6 +81,16 @@ textarea:active {
     border-right: 0;
 }
 
+
+.expenses-group .form-control {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+
 .panel-heading {
     margin-bottom: 20px;
 }
@@ -124,7 +134,7 @@ label, p {
     background-color: rgba(0,0,0,0);
 }
 
-#add-expense {
+#add-expenses {
 	width: 100%;
     border-width: 1px;
     border-color: #FF7C93;
