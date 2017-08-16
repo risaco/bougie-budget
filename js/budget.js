@@ -25,9 +25,24 @@ $(document).ready(function() {
         $('#zip-input').val("");
 
         location.href = "budget.html";
+
+        //Housing call and Data
+
+        // var queryURLHousing = "https://www.quandl.com/api/v3/datasets/ZILL/Z" + zipcode + "_SPY.csv/metadata.json?api_key=YLrr6a7wymzzjhMCd_xr"
+        // $.ajax({
+        //     url: queryURLHousing,
+        //     method: "GET"
+        //   })
+        //   .done(function(data) {
+        //     console.log(data);
+        //   })
       })
 
   });
+
+
+
+
 
   // Adding income button function.
   $("#add-income").click(function() {
@@ -38,4 +53,9 @@ $(document).ready(function() {
 
   });
   //Buttons
+
+
+
+
+
 });

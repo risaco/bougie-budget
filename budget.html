@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-US">
+<html lang="en-US">
 
 <head>
     <!-- Meta Info -->
@@ -8,7 +8,7 @@
     <meta name="description" content="Money, money, money, money!">
     <!-- <meta name="author" content="Elijah Kleinsmith"> -->
     <!-- Page Title -->
-    <title>Bougie Budget</title>
+    <title>Bougie Budget • Calculate</title>
     <!-- Favicon + iOS Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -23,8 +23,10 @@
     <link rel="stylesheet" type="text/css" href="css/budget-styles.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900' rel='stylesheet' type='text/css'>
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
-    <!--<link rel="stylesheet" href="css/main.css"> -->
 </head>
 
 <body>
@@ -60,14 +62,14 @@
                             <div class="row repeating-income-row">
                                 <div class="col-md-6">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="income-label-input" aria-describedby="basic-addon1" placeholder="Type your custom input label here.">
+                                        <input type="text" class="form-control" id="income-label-input" placeholder="Type your custom input label here.">
                                     </div>
                                     <br>
                                     <!-- <button type="button" class="btn btn-primary" id="clear">Clear Results</button> -->
                                 </div>
                                 <div class="col-md-6">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="income-amount-input" aria-describedby="basic-addon1" placeholder="1000">
+                                        <input type="text" class="form-control" id="income-amount-input" placeholder="1000">
                                     </div>
                                 </div>
                             </div>
@@ -77,83 +79,77 @@
                                 <button type="button" class="btn btn-primary" id="add-income">ADD ROW</button>
                             </div>
                         </div>
-                        <!-- <div class="col-md-4">
-                                <label for="#">More Income stuff</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" aria-describedby="basic-addon1">
-                                </div>
-                            </div> -->
                         <br>
                         <h2 class="custom-panel-header">Expenses</h2>
                         <hr class="custom-panel-border">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p id="housing-label"><strong>Rent / Mortgage</strong></p>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="#">Amount ($)</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="housing-amount-input" aria-describedby="basic-addon1">
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p id="utilities-label"><strong>Utilities</strong></p>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="utilities-amount">Amount ($)</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="utilities-amount-input" aria-describedby="basic-addon1">
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p id="gas-label"><strong>Gas</strong></p>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="gas-amount">Amount ($)</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="gas-amount-input" aria-describedby="basic-addon1">
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div id="expenses-block">
+                        <div id="expenses-sr">
+                            <div class="row">
                                 <div class="col-md-6">
-                                    <label for="#">Income Label</label>
+                                    <p id="housing-label"><strong>Rent / Mortgage</strong></p>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="#">Amount ($)</label>
-                                </div>
-                                <div class="row repeating-expenses-row">
-                                    <div class="col-md-6">
-                                        <div class="expenses-group">
-                                            <input type="text" class="form-control" id="expenses-label-input" aria-describedby="basic-addon1" placeholder="Type your custom input label here.">
-                                        </div>
-                                        <br>
-                                        <!-- <button type="button" class="btn btn-primary" id="clear">Clear Results</button> -->
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="expenses-group">
-                                            <input type="text" class="form-control" id="expenses-amount-input" aria-describedby="basic-addon1" placeholder="1000">
-                                        </div>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="housing-amount-input">
                                     </div>
                                 </div>
                             </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p id="utilities-label"><strong>Utilities</strong></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="utilities-amount">Amount ($)</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="utilities-amount-input">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p id="gas-label"><strong>Gas</strong></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="gas-amount">Amount ($)</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="gas-amount-input">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
                             <div class="col-md-12">
-                                <button type="button" class="btn btn-primary" id="add-expenses">ADD ROW</button>
-                            </div>
-                            <!-- <div class="col-md-4">
-                                <label for="#">Even More Expenses</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" aria-describedby="basic-addon1">
+                                <div id="expenses-block">
+                                    <div class="col-md-6">
+                                        <label for="#">Expenses Label</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="#">Amount ($)</label>
+                                    </div>
+                                    <div class="row repeating-expenses-row">
+                                        <div class="col-md-6">
+                                            <div class="expenses-group">
+                                                <input type="text" class="form-control" id="expenses-label-input" placeholder="Type your custom input label here.">
+                                            </div>
+                                            <br>
+                                            <!-- <button type="button" class="btn btn-primary" id="clear">Clear Results</button> -->
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="expenses-group">
+                                                <input type="text" class="form-control" id="expenses-amount-input" placeholder="1000">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div> -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button type="button" class="btn btn-primary" id="add-expenses">ADD ROW</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -166,28 +162,54 @@
                         <hr class="custom-panel-border">
                         <div class="row">
                             <div class="col-md-12" id="expense-display">
-                                <h2><strong>Info Here</strong></h2></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h2><strong>Info Here</strong></h2></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h2><strong>Info Here</strong></h2></div>
+                                <h3 class="results-text">No results available.</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')
-        </script>
-        <script src="js/budget.js" type="text/javascript"></script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-        <!-- Link the Javascript below -->
-        <!-- <script type="text/javascript" src="assets/js/data.js"></script> -->
+            <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+            <script>
+            window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')
+            </script>
+            <script src="js/budget.js" type="text/javascript"></script>
+            <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+            <!-- Link the Javascript below -->
+            <!-- <script type="text/javascript" src="assets/js/data.js"></script> -->
+            <!-- Scroll Reveals -->
+            <script>
+            window.sr = ScrollReveal();
+            sr.reveal('.custom-panel-header', {
+                duration: 500,
+                origin: 'bottom',
+                mobile: true,
+                // reset: true,
+            })
+            sr.reveal('#income-block', {
+                duration: 2000,
+                origin: 'top',
+                mobile: true,
+                // reset: true,
+            })
+            sr.reveal('#expenses-block, #expenses-sr', {
+                duration: 2000,
+                origin: 'top',
+                mobile: true,
+                // reset: true,
+            })
+            sr.reveal('.btn', {
+                duration: 2000,
+                origin: 'top',
+                mobile: true,
+                // reset: true,
+            })
+            sr.reveal('.results-text', {
+                duration: 2000,
+                origin: 'top',
+                mobile: true,
+                // reset: true,
+            })
+            </script>
 </body>
 
 </html>
