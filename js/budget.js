@@ -26,19 +26,37 @@ $(document).ready(function() {
 
         location.href = "budget.html";
 
-        //Housing call and Data
 
-        // var queryURLHousing = "https://www.quandl.com/api/v3/datasets/ZILL/Z" + zipcode + "_SPY.csv/metadata.json?api_key=YLrr6a7wymzzjhMCd_xr"
-        // $.ajax({
-        //     url: queryURLHousing,
-        //     method: "GET"
-        //   })
-        //   .done(function(data) {
-        //     console.log(data);
-        //   })
+
       })
 
   });
+
+  //Values of Inputs
+  // var firstIncome = $('#income-amount-input').val().trim();
+  // var housingInput = $('#housing-amount-input').val().trim();
+  // var utilityInput = $('#utilities-amount-input').val().trim();
+  // var gasInput = $('#gas-amount-input').val().trim();
+
+  // Dynamic add to results.
+  var resultsDiv = $("<div class='next-result'>");
+  var resultsDiv1 = $("<div class='next-result1'>");
+
+  $('#housing-amount-input').keyup(function() {
+    $(".results-text").html("<h4> Housing </h4>" + $('#housing-amount-input').val().trim());
+    $(".results-text").append(resultsDiv);
+  })
+
+  $('#utilities-amount-input').keyup(function() {
+    $('.next-result').html("<h4> Utilities </h4>" + $("#utilities-amount-input").val().trim());
+    $(".results-text").append(resultsDiv);
+  })
+  $('#gas-amount-input').keyup(function() {
+    $('.next-result1').html("<h4> Gas </h4>" + $("#gas-amount-input").val().trim());
+    $(".results-text").append(resultsDiv1);
+  })
+
+
 
 
 
