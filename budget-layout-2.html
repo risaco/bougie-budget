@@ -68,14 +68,14 @@
                             </div>
                             <div class="row repeating-income-row">
                                 <div class="col-md-6">
-                                    <div class="input-group">
+                                    <div class="input-group input-label">
                                         <input type="text" class="form-control" id="income-label-input" placeholder="Type your custom input label here.">
                                     </div>
                                     <br>
                                     <!-- <button type="button" class="btn btn-primary" id="clear">Clear Results</button> -->
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="input-group">
+                                    <div class="input-group input-amount">
                                         <input type="text" class="form-control" id="income-amount-input" placeholder="1000">
                                     </div>
                                 </div>
@@ -85,6 +85,8 @@
                             <div class="col-md-6">
                                 <button type="button" class="btn btn-primary" id="done-income">DONE WITH INCOME</button>
                             </div>
+                                <!-- Spacer -->
+                            <div class="col-md-3"></div>
                             <div class="col-md-3">
                                 <button type="button" class="btn btn-primary" id="add-income">ADD ROW</button>
                             </div>
@@ -105,7 +107,7 @@
                                 <div class="col-md-6">
                                     <p id="housing-label"><strong>Rent / Mortgage</strong></p>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 input-amount">
                                     <label for="#">Amount ($)</label>
                                     <div class="input-group">
                                         <input type="text" class="form-control" id="housing-amount-input">
@@ -117,7 +119,7 @@
                                 <div class="col-md-6">
                                     <p id="utilities-label"><strong>Utilities</strong></p>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 input-amount">
                                     <label for="utilities-amount">Amount ($)</label>
                                     <div class="input-group">
                                         <input type="text" class="form-control" id="utilities-amount-input">
@@ -129,7 +131,7 @@
                                 <div class="col-md-6">
                                     <p id="gas-label"><strong>Gas</strong></p>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 input-amount">
                                     <label for="gas-amount">Amount ($)</label>
                                     <div class="input-group">
                                         <input type="text" class="form-control" id="gas-amount-input">
@@ -141,21 +143,23 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div id="expenses-block">
-                                    <div class="col-md-6">
-                                        <label for="#">Expenses Label</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="#">Amount ($)</label>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p id="expenses-label"><strong>More Expenses</strong></p>
+                                        </div>
+                                        <div class="col-md-6 input-amount-label">
+                                            <p id="input-amount-label"><strong>Amount ($)</strong></p>
+                                        </div>
                                     </div>
                                     <div class="row repeating-expenses-row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-6 input-label">
                                             <div class="expenses-group">
-                                                <input type="text" class="form-control" id="expenses-label-input" placeholder="Type your custom input label here.">
+                                                <input type="text" class="form-control" id="expenses-label-input" placeholder="Custom label here">
                                             </div>
-                                            <br>
+                                            <!-- <br> -->
                                             <!-- <button type="button" class="btn btn-primary" id="clear">Clear Results</button> -->
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-6 input-amount">
                                             <div class="expenses-group">
                                                 <input type="text" class="form-control" id="expenses-amount-input" placeholder="1000">
                                             </div>
@@ -166,6 +170,8 @@
                                     <div class="col-md-6">
                                         <button type="button" class="btn btn-primary" id="done-expenses">DONE WITH EXPENSES</button>
                                     </div>
+                                        <!-- Spacer -->
+                                    <div class="col-md-3"></div>
                                     <div class="col-md-3">
                                         <button type="button" class="btn btn-primary" id="add-expenses">ADD ROW</button>
                                     </div>
@@ -196,7 +202,7 @@
             <script>
             window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')
             </script>
-            <script src="js/budget.js" type="text/javascript"></script>
+            <script src="js/budget-layout-2.js" type="text/javascript"></script>
             <script src="https://www.google-analytics.com/analytics.js" async defer></script>
             <!-- Link the Javascript below -->
             <!-- <script type="text/javascript" src="assets/js/data.js"></script> -->

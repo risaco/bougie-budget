@@ -105,7 +105,11 @@ p {
     color: white;
 }
 
-
+p {
+    font-size: large;
+    margin-top: 10px;
+    text-align: center;
+}
 
 /* Classes */
 
@@ -156,18 +160,19 @@ p {
     border-color: blue;
     color: blue;
     background-color: rgba(0, 0, 0, 0);
+    text-align: center;
 }
 
 
 #income-display {
 
-    display: block;
+    display: none;
 
 }
 
 #expenses-display {
 
-    display: none;
+    display: block;
 }
 
 #results-display {
@@ -182,5 +187,35 @@ p {
     .btn-primary {
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+    p, .input-label {
+        max-width: 47%;
+        float: left;
+
+    }
+
+    .input-amount-label {
+
+        max-width: 50%;
+
+    }
+
+    .input-amount {
+        float: right;
+        max-width: 47%;
+        margin-left: 6%;
+    }
+
+    #done-income, #done-expenses {
+        max-width: 47%;
+        float: left;
+        font-size: 90%;
+    }
+
+    #add-income, #add-expenses {
+        max-width: 47%;
+        margin-left: 6%;
+        font-size: 90%;
     }
 }
