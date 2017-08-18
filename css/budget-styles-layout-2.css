@@ -150,8 +150,30 @@ p {
     background-color: rgba(0, 0, 0, 0);
 }
 
+#done-income, #done-expenses {
+    width: 100%;
+    border-width: 1px;
+    border-color: blue;
+    color: blue;
+    background-color: rgba(0, 0, 0, 0);
+}
 
 
+#income-display {
+
+    display: block;
+
+}
+
+#expenses-display {
+
+    display: none;
+}
+
+#results-display {
+
+    display: none;
+}
 
 
 /* Mobile Breakpoint */

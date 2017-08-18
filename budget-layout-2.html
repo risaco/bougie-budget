@@ -43,16 +43,20 @@
         </div>
         
         <!-- Row that contains both the income/expenses panel and the results panel -->
-        <div class="row">
+        <div class="row" id="mainBox">
             <!-- Income and Expenses panel info -->
-            <div class="col-md-7" id="mainDisplay"> 
+
+            <!-- Spacer -->
+            <div class="col-md-2"></div>
+
+            <div class="col-md-8 center-block" id="mainDisplay"> 
 
                 <!-- **** Code for Income Display **** -->
                 <div class="panel panel-default" id="income-display">
                     
                     <div class="panel-body">
                         <div class="row">
-                            <h2 class="custom-panel-header">Income</h2>
+                            <h2 class="custom-panel-header">Monthly Income</h2>
                             <hr class="custom-panel-border">
                         </div>
                         <div id="income-block">
@@ -78,20 +82,23 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-primary" id="done-income">DONE WITH INCOME</button>
+                            </div>
+                            <div class="col-md-3">
                                 <button type="button" class="btn btn-primary" id="add-income">ADD ROW</button>
                             </div>
                         </div>
 
                     </div>
-                        <!-- **** End of Income Display **** -->
-                </div>
+                        
+                </div> <!-- **** End of Income Display **** -->
 
                 <!-- **** Code for Expenses Display **** -->
                 <div class="panel panel-default" id="expenses-display">
                     
                     <div class="panel-body">
-                        <h2 class="custom-panel-header">Expenses</h2>
+                        <h2 class="custom-panel-header">Monthly Expenses</h2>
                         <hr class="custom-panel-border">
                         <div id="expenses-sr">
                             <div class="row">
@@ -156,7 +163,10 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-6">
+                                        <button type="button" class="btn btn-primary" id="done-expenses">DONE WITH EXPENSES</button>
+                                    </div>
+                                    <div class="col-md-3">
                                         <button type="button" class="btn btn-primary" id="add-expenses">ADD ROW</button>
                                     </div>
                                 </div>
